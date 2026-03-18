@@ -3,86 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Презентація: Джерела енергії (Оновлена)</title>
+    <title>Розширена презентація: Енергетика</title>
     <style>
         :root { --primary: #2563eb; --secondary: #10b981; --dark: #1e293b; --light: #f8fafc; }
-        body { font-family: sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #0f172a; color: var(--dark); }
-        .container { width: 95%; max-width: 800px; height: 550px; background: var(--light); border-radius: 15px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 40px; box-sizing: border-box; display: none; flex-direction: column; justify-content: center; animation: fadeIn 0.4s; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #0f172a; color: var(--dark); }
+        .container { width: 95%; max-width: 900px; height: 600px; background: var(--light); border-radius: 20px; position: relative; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 50px; box-sizing: border-box; display: none; flex-direction: column; justify-content: center; animation: fadeIn 0.5s ease-in-out; }
         .slide.active { display: flex; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        h1, h2 { color: var(--primary); }
-        ul { font-size: 1.1rem; line-height: 1.5; }
-        li { margin-bottom: 8px; }
-        .controls { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 10; }
-        button { padding: 12px 24px; border: none; background: var(--primary); color: white; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        button:hover:not(:disabled) { background: #1d4ed8; }
-        button:disabled { background: #cbd5e1; cursor: not-allowed; }
-        .slide-num { position: absolute; bottom: 25px; left: 20px; font-size: 0.8rem; color: #64748b; }
-        .warning { background: #fef2f2; padding: 10px; border-left: 4px solid #ef4444; margin: 10px 0; font-weight: bold; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        p { line-height: 1.6; font-size: 1.1rem; color: #334155; }
+        ul { font-size: 1.05rem; line-height: 1.6; }
+        li { margin-bottom: 10px; }
+        .controls { position: absolute; bottom: 30px; right: 40px; display: flex; gap: 15px; z-index: 10; }
+        button { padding: 12px 28px; border: none; background: var(--primary); color: white; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2); }
+        button:hover:not(:disabled) { background: #1d4ed8; transform: translateY(-2px); }
+        button:disabled { background: #cbd5e1; cursor: not-allowed; box-shadow: none; }
+        .slide-num { position: absolute; bottom: 35px; left: 40px; font-size: 0.9rem; font-weight: bold; color: #64748b; }
+        .highlight { color: var(--secondary); font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="slide active">
-        <h1 style="text-align:center;">Джерела електричної енергії</h1>
-        <h3 style="text-align:center; color: var(--secondary);">Застосування та утилізація</h3>
-        <p style="text-align:center; margin-top:40px;">Презентація для уроку фізики</p>
+        <h1 style="text-align:center;">Сучасна електроенергетика</h1>
+        <h3 style="text-align:center; color: var(--secondary);">Відновлювані джерела та технології зберігання</h3>
+        <div style="text-align:center; margin-top:50px; font-style: italic;">
+            <p>Фізика та екологія в 21 столітті</p>
+        </div>
     </div>
 
     <div class="slide">
         <h2>Розвиток відновлюваної енергії</h2>
-        <p>Сучасні технології дозволяють ефективно використовувати енергію сонця та вітру. Це зменшує залежність від викопного палива та знижує викиди CO2 в атмосферу.</p>
+        <p>Світ активно переходить на <span class="highlight">"зелені" джерела</span>, щоб зупинити глобальне потепління. Основні напрямки:</p>
+        <ul>
+            <li><b>Сонячна енергетика:</b> Використання фотоелектричних панелей, які перетворюють кванти світла безпосередньо в електричний струм.</li>
+            <li><b>Вітрова генерація:</b> Сучасні вітряки здатні забезпечувати енергією цілі міста, використовуючи лише кінетичну силу повітряних мас.</li>
+            <li><b>Гідроенергетика:</b> Малі ГЕС мінімізують вплив на річкову екосистему, зберігаючи високу ефективність.</li>
+            <li><b>Геотермальна енергія:</b> Використання тепла земних надр для отримання пари та обертання турбін.</li>
+        </ul>
     </div>
 
     <div class="slide">
         <h2>Акумулятори та енергозбереження</h2>
-        <p>Використання літій-іонних та нових твердотільних акумуляторів дозволяє зберігати енергію, отриману вдень, для використання вночі. Енергозбереження — це перший крок до екологічного майбутнього.</p>
-    </div>
-
-    <div class="slide">
-        <h2>Типи джерел енергії</h2>
+        <p>Головна проблема відновлюваної енергії — її нестабільність (сонце не світить вночі). Рішенням є <span class="highlight">системи накопичення (ESS)</span>:</p>
         <ul>
-            <li><b>Відновлювані:</b> Сонце, вітер, вода (ГЕС).</li>
-            <li><b>Невідновлювані:</b> Вугілля, газ, нафта, атомна енергія.</li>
-            <li><b>Хімічні:</b> Акумулятори, гальванічні елементи (батарейки).</li>
+            <li><b>Літій-іонні технології:</b> Висока щільність енергії дозволяє створювати як компактні павербанки, так і величезні Tesla Powerpack.</li>
+            <li><b>Smart Grid:</b> Розумні мережі, що автоматично перерозподіляють енергію туди, де вона потрібна в цей момент.</li>
+            <li><b>Енергоефективність:</b> Перехід на LED-освітлення та класи енергоспоживання А+++ дозволяє знизити загальне навантаження на мережу на 30-40%.</li>
+            <li><b>Рекуперація:</b> Повернення енергії в мережу під час гальмування електротранспорту.</li>
         </ul>
     </div>
 
     <div class="slide">
-        <h2>Застосування</h2>
+        <h2>Класифікація джерел енергії</h2>
+        <p>Всі джерела можна розділити на дві великі групи за принципом їхнього вичерпання:</p>
         <ul>
-            <li><b>Побут:</b> Освітлення, смартфони, комп'ютери.</li>
-            <li><b>Транспорт:</b> Електромобілі, трамваї, метро.</li>
-            <li><b>Медицина:</b> Апарати діагностики (МРТ, УЗД).</li>
+            <li><b>Традиційні:</b> Спалювання вугілля та газу призводить до викидів парникових газів. Атомна енергія потужна, але потребує складного захоронення відходів.</li>
+            <li><b>Альтернативні:</b> Практично невичерпні ресурси природи, які мають мінімальний вуглецевий слід.</li>
         </ul>
     </div>
 
     <div class="slide">
-        <h2>Екологічний аспект</h2>
-        <div class="warning">Не викидайте батарейки у смітник!</div>
+        <h2>Екологічна відповідальність</h2>
+        <p>Технологічний прогрес створює нові виклики. <span class="highlight">Хімічні джерела струму</span> потребують особливого поводження:</p>
         <ul>
-            <li>Одна батарейка забруднює важкими металами 20 м² ґрунту.</li>
-            <li>Важкі метали (ртуть, свинець) потрапляють у воду та їжу.</li>
+            <li>Електроліти всередині батарейок містять кадмій, ртуть та свинець.</li>
+            <li>Потрапляючи в землю, ці речовини отруюють підземні води на десятиліття.</li>
+            <li><b>Циклічна економіка:</b> Сучасні заводи можуть переробляти до 95% компонентів старих акумуляторів для створення нових.</li>
         </ul>
     </div>
 
     <div class="slide">
-        <h2>Утилізація</h2>
-        <ul>
-            <li>Здавайте батарейки у спеціальні пункти прийому.</li>
-            <li>Замінюйте одноразові батарейки на багаторазові акумулятори.</li>
-            <li>Підтримуйте розвиток "зеленої" енергетики.</li>
-        </ul>
+        <h2 style="text-align:center;">Майбутнє за чистою енергією</h2>
+        <p style="text-align:center;">Кожен з нас може зробити внесок: від вчасно вимкненої лампи до правильної утилізації старої батарейки.</p>
+        <p style="text-align:center; font-size: 5rem; margin: 0;">☀️💨🔋</p>
     </div>
 
-    <div class="slide">
-        <h2 style="text-align:center;">Дякую за увагу!</h2>
-        <p style="text-align:center; font-size: 4rem;">🔋♻️</p>
-    </div>
-
-    <div class="slide-num" id="sNum">Слайд 1 / 8</div>
+    <div class="slide-num" id="sNum">Слайд 1 / 6</div>
     <div class="controls">
         <button id="pBtn" onclick="chSl(-1)" disabled>Назад</button>
         <button id="nBtn" onclick="chSl(1)">Далі</button>
@@ -90,31 +90,29 @@
 </div>
 
 <script>
-    // 1. Отримуємо всі слайди в масив
     let cur = 0; 
-    const s = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.slide');
     const pBtn = document.getElementById('pBtn');
     const nBtn = document.getElementById('nBtn');
     const sNum = document.getElementById('sNum');
 
-    // 2. Функція зміни слайда
-    function chSl(d){
-        // Приховуємо поточний слайд
-        s[cur].classList.remove('active'); 
-        
-        // Змінюємо індекс
-        cur += d; 
-        
-        // Показуємо новий слайд
-        s[cur].classList.add('active');
-        
-        // Оновлюємо стан кнопок (якщо перший або останній слайд)
+    function chSl(direction) {
+        // Логіка перемикання класів
+        slides[cur].classList.remove('active');
+        cur += direction;
+        slides[cur].classList.add('active');
+
+        // Оновлення інтерфейсу
         pBtn.disabled = (cur === 0);
-        nBtn.disabled = (cur === s.length - 1);
-        
-        // Оновлюємо лічильник
-        sNum.innerText = `Слайд ${cur + 1} / ${s.length}`;
+        nBtn.disabled = (cur === slides.length - 1);
+        sNum.innerText = `Слайд ${cur + 1} / ${slides.length}`;
     }
+
+    // Додатково: підтримка клавіш стрілок
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "ArrowRight" && cur < slides.length - 1) chSl(1);
+        if (e.key === "ArrowLeft" && cur > 0) chSl(-1);
+    });
 </script>
 
 </body>
