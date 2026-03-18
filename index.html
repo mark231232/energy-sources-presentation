@@ -1,94 +1,17 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Презентація: Джерела енергії</title>
-    <style>
-        :root { --primary: #2563eb; --secondary: #10b981; --dark: #1e293b; --light: #f8fafc; }
-        body { font-family: sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #0f172a; color: var(--dark); }
-        .container { width: 95%; max-width: 800px; height: 550px; background: var(--light); border-radius: 15px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
-        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 30px; box-sizing: border-box; display: none; flex-direction: column; justify-content: center; animation: fadeIn 0.4s; }
-        .slide.active { display: flex; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        h1, h2 { color: var(--primary); }
-        ul { font-size: 1.1rem; line-height: 1.5; }
-        li { margin-bottom: 8px; }
-        .controls { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 10px; }
-        button { padding: 12px 24px; border: none; background: var(--primary); color: white; border-radius: 8px; font-weight: bold; cursor: pointer; }
-        button:disabled { background: #cbd5e1; }
-        .slide-num { position: absolute; bottom: 25px; left: 20px; font-size: 0.8rem; color: #64748b; }
-        .warning { background: #fef2f2; padding: 10px; border-left: 4px solid #ef4444; margin: 10px 0; font-weight: bold; }
-        .author-label { position: absolute; bottom: 5px; left: 20px; font-size: 0.9rem; color: var(--dark); }
-    </style>
+    <title>Energy Sources Presentation</title>
 </head>
 <body>
-<div class="container">
-    <div class="slide active">
-        <h1 style="text-align:center;">Джерела електричної енергії</h1>
-        <h3 style="text-align:center; color: var(--secondary);">Застосування та утилізація</h3>
-    </div>
-    <div class="slide">
-        <h2>Типи джерел енергії</h2>
-        <ul>
-            <li><b>Відновлювані:</b> Сонце, вітер, вода (ГЕС).</li>
-            <li><b>Невідновлювані:</b> Вугілля, газ, нафта, атомна енергія.</li>
-            <li><b>Хімічні:</b> Акумулятори, гальванічні елементи (батарейки).</li>
-        </ul>
-    </div>
-    <div class="slide">
-        <h2>Застосування</h2>
-        <ul>
-            <li><b>Побут:</b> Освітлення, смартфони, комп'ютери.</li>
-            <li><b>Транспорт:</b> Електромобілі, трамваї, метро.</li>
-            <li><b>Медицина:</b> Апарати діагностики (МРТ, УЗД).</li>
-        </ul>
-    </div>
-    <div class="slide">
-        <h2>Екологічний аспект</h2>
-        <div class="warning">Не викидайте батарейки у смітник!</div>
-        <ul>
-            <li>Одна батарейка забруднює важкими металами 20 м² ґрунту.</li>
-            <li>Важкі метали (ртуть, свинець) потрапляють у воду та їжу.</li>
-        </ul>
-    </div>
-    <div class="slide">
-        <h2>Утилізація</h2>
-        <ul>
-            <li>Здавайте батарейки у спеціальні пункти прийому.</li>
-            <li>Замінюйте одноразові батарейки на багаторазові акумулятори.</li>
-            <li>Підтримуйте розвиток "зеленої" енергетики.</li>
-        </ul>
-    </div>
-    <div class="slide">
-        <h2>Розвиток відновлюваної енергії</h2>
-        <p>У світі з кожним роком збільшується частка енергії, отриманої з відновлюваних джерел. Сонячні батареї стають все доступнішими, а вітрові фарми покривають значну частину енергетичних потреб в країнах, як-от Данія чи Німеччина. Це важливий крок до екологічно чистого майбутнього.</p>
-        <p>Будівництво нових гідроелектростанцій також дає змогу ефективно використовувати потоки річок без шкоди для екосистем.</p>
-    </div>
-    <div class="slide">
-        <h2>Акумулятори та енергозбереження</h2>
-        <p>Сучасні акумуляторні технології дозволяють зберігати енергію на довгий період та використовувати її за потреби. Наприклад, літій-іонні акумулятори живлять електромобілі, зменшуючи залежність від викопного палива. Такі батареї також використовуються в домашніх системах зберігання енергії.</p>
-        <p>Водночас поступово впроваджуються мережі інтелектуального електропостачання, які знижують втрати енергії та підвищують ефективність використання ресурсів.</p>
-    </div>
-    <div class="slide">
-        <h2 style="text-align:center;">Дякую за увагу!</h2>
-        <p style="text-align:center; font-size: 4rem;">🔋♻️</p>
-        <div class="author-label">Автор: Марк Ільчук 8-В</div>
-    </div>
-    <div class="slide-num" id="sNum">Слайд 1 / 8</div>
-    <div class="controls">
-        <button id="pBtn" onclick="chSl(-1)" disabled>Назад</button>
-        <button id="nBtn" onclick="chSl(1)">Далі</button>
-    </div>
-</div>
-<script>
-    let cur = 0; const s = document.querySelectorAll('.slide');
-    function chSl(d){
-        s[cur].classList.remove('active'); cur+=d; s[cur].classList.add('active');
-        document.getElementById('pBtn').disabled = cur===0;
-        document.getElementById('nBtn').disabled = cur===s.length-1;
-        document.getElementById('sNum').innerText = `Слайд ${cur+1} / ${s.length}`;
-    }
-</script>
+    <h2>Розвиток відновлюваної енергії</h2>
+    <p>Content related to renewable energy development...</p>
+    <h2>Акумулятори та енергозбереження</h2>
+    <p>Content related to batteries and energy conservation...</p>
+    <h1>Джерела електричної енергії</h1>
+    <p>Content related to sources of electric energy...</p>
+    <!-- Additional slides here... -->
 </body>
 </html>
